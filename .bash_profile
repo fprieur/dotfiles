@@ -11,4 +11,4 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
 
-{% raw %}alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"{% endraw %}
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
