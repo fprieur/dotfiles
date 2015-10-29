@@ -3,7 +3,9 @@
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
-        alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+        # Alias pour inspecter l'adresse ip d'un containeur donné
+        {% raw %}alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"{% endraw %}
 fi
 
 # User specific environment and startup programs
