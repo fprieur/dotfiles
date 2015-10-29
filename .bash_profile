@@ -3,6 +3,7 @@
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
+        alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 fi
 
 # User specific environment and startup programs
@@ -10,5 +11,3 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
-
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
