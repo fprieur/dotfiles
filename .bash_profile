@@ -5,7 +5,7 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 
         # Alias pour inspecter l'adresse ip d'un containeur donné
-        {% raw %}alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"{% endraw %}
+        alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
         # Permet de faire des appels avec la libraries httpie
         alias http='docker run -it --rm --net=host clue/httpie'
