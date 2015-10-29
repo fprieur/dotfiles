@@ -10,6 +10,9 @@ if [ -f ~/.bashrc ]; then
         # Permet de faire des appels avec la libraries httpie
         alias http='docker run -it --rm --net=host clue/httpie'
 
+
+        alias htop='docker run -it --rm jess/htop'
+
         # Suppression de tous les containeurs non-actifs
         drm() { docker rm $(docker ps -q -a); }
 
@@ -18,6 +21,7 @@ if [ -f ~/.bashrc ]; then
 
         # Pour le build d'une image
         db() { docker build -t="$1" .; }
+
 fi
 
 # User specific environment and startup programs
