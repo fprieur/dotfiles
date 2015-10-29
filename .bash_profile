@@ -11,7 +11,12 @@ if [ -f ~/.bashrc ]; then
         alias http='docker run -it --rm --net=host clue/httpie'
 
 
-        alias htop='docker run -it --rm jess/htop'
+        htop(){
+	             docker run --rm -it \
+		                  --pid host \
+		                  --name htop \
+		                  jess/htop
+        }
 
         # Suppression de tous les containeurs non-actifs
         drm() { docker rm $(docker ps -q -a); }
